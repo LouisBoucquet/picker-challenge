@@ -1,11 +1,15 @@
 function init() {
-	const personArray = [...document.getElementsByTagName('span')];
-	const scores = personArray.map(() => 0);
+	const progressBars = [...document.getElementsByClassName('progress-bar')];
+	const progressInfos = [...document.getElementsByClassName('progress-info')];
+
+	const contestants = ['Yannick', 'Torn', 'Ward'];
+	const scores = progressBars.map(() => 0);
 
 	const tick = () => {
 		scores.forEach((_, i) => {
 			scores[i] += Math.random() * 0.1;
-			personArray[i].style.width = `${scores[i]}%`;
+			progressBars[i].style.width = `${scores[i]}%`;
+			progressInfos[i].innerText = `${contestants[i]} (${scores[i].toFixed(1)}%)`
 		});
 
 		if (Math.max(...scores) < 100)

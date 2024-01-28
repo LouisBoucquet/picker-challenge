@@ -8,15 +8,15 @@ body {
 	display: inline-block;
 }
 
-#Ward span {
+#Ward span.progress-bar {
 	background-color: #b45858;
 }
 
-#Yannick span {
+#Yannick span.progress-bar {
 	background-color: #52d66f;
 }
 
-#Torn span {
+#Torn span.progress-bar {
 	background-color: #5d58b4;
 }
 
@@ -27,9 +27,10 @@ body {
 	position: relative;
 }
 
-.person::before {
+.person span.progress-info {
 	position: absolute;
-	content: attr(id) " (" attr(data-total) ")";
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	text-align: center;
