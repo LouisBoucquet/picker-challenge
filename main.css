@@ -1,0 +1,46 @@
+.person span {
+    width: 3px;
+    height: 20px;
+    display: inline-block;
+}
+
+#Ward span {
+    background-color: #b45858;
+}
+
+#Yannick span {
+    background-color: #52d66f;
+}
+
+#Torn span {
+    background-color: #5d58b4;
+}
+
+.person {
+    width: 100vw;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.person::before {
+    position: absolute;
+    content: attr(id) " (" attr(data-total) ")";
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+    color: white;
+}
+
+#start {
+    background-color: beige;
+    color: black;
+    border: solid 1px bisque;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 4px 8px;
+    margin-bottom: 30px;
+}
