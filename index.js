@@ -1,15 +1,14 @@
 function init() {
-	const persons = document.getElementsByTagName('span');
-	const personArray = Array.from(persons);
-	const numberOfContestants = personArray.length;
+	const personArray = [...document.getElementsByTagName('span')];
 	const scores = personArray.map(() => 0);
 
 	const tick = () => {
 		if (Math.max(...scores) >= 100) return;
 
-		const winnerIndex = Math.floor(Math.random() * numberOfContestants);
-		scores[winnerIndex]++;
-		personArray[winnerIndex].style.width = `${scores[winnerIndex]}%`;
+		scores.forEach((_, i) => {
+			scores[i] += Math.random() * 0.1;
+			personArray[i].style.width = `${scores[i]}%`;
+		})
 
 		requestAnimationFrame(tick);
 	};
