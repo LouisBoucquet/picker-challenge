@@ -18,6 +18,4 @@ function init() {
 	tick();
 }
 
-document.getElementById('start').addEventListener('click', () => {
-	init();
-});
+document.getElementById('start').addEventListener('click', init);
