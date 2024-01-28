@@ -8,8 +8,7 @@ function init() {
 	const tick = () => {
 		if (count >= iterations) return;
 
-		let winner = Math.ceil(Math.random() * max);
-		winner = winner - 1;
+		const winner = Math.floor(Math.random() * max);
 		const spanneke = document.createElement('span');
 		personArray[winner].append(spanneke);
 		personArray[winner].setAttribute(
