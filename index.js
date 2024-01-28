@@ -1,8 +1,8 @@
 function init() {
 	const persons = document.getElementsByClassName('person');
 	const personArray = Array.from(persons);
-	const numberOfContestants = Array.from(persons).length;
-	const scores = Array.apply(null, Array(numberOfContestants)).map(() => 0);
+	const numberOfContestants = personArray.length;
+	const scores = personArray.map(() => 0);
 
 	const tick = () => {
 		if (Math.max(...scores) >= 100) return;
