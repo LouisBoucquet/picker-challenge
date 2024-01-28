@@ -4,7 +4,6 @@ body {
 }
 
 .person span {
-	width: 1%;
 	height: 20px;
 	display: inline-block;
 }
